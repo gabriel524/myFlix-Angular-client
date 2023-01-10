@@ -1,0 +1,22 @@
+:host {
+    .WelcomePageComponent {
+        height: 100%;
+        padding: 1rem;
+        background-color: bisque;
+    }
+}
+
+.title {
+    margin-top: 2rem;
+    justify-content: center;
+    display: flex;
+}
+
+.btn {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    display: flex;
+    padding: 1rem;
+}
