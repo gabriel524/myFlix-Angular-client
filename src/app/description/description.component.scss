@@ -1,0 +1,34 @@
+$bgColor: #af0624;
+$text: #fff;
+$boxColor: #000;
+$secondColor: #8d4c4c;
+
+.summary-dialog {
+    max-width: 400px;
+    margin: auto;
+    padding: 25px;
+    background-color: $secondColor;
+    border-style: solid;
+    border-color: $boxColor;
+    border-width: 5px;
+}
+
+.movie-title {
+    display: flex;
+    justify-content: center;
+    color: $text;
+}
+
+.movie-summary {
+    color: $text;
+}
+
+.summary-close {
+    background-color: $boxColor;
+}
+
+.summary-actions {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}

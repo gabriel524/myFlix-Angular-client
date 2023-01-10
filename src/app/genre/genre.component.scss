@@ -1,0 +1,34 @@
+$bgColor: #af0624;
+$text: #fff;
+$boxColor: #000;
+$secondColor: #8d4c4c;
+
+.genre-dialog {
+    max-width: 400px;
+    margin: auto;
+    padding: 25px;
+    background-color: $secondColor;
+    border-style: solid;
+    border-color: $boxColor;
+    border-width: 5px;
+}
+
+.genre-name {
+    display: flex;
+    justify-content: center;
+    color: $text;
+}
+
+.genre-description {
+    color: $text;
+}
+
+.genre-close {
+    background-color: $boxColor;
+}
+
+.genre-actions {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}

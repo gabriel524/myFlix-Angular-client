@@ -1,0 +1,83 @@
+.title {
+    margin-top: 2rem;
+    justify-content: center;
+    display: flex;
+}
+
+$bgColor: hsl(190, 93%, 35%);
+$text: #fff;
+$boxColor: rgb(10, 56, 96);
+$secondColor: #8d4c4c;
+
+.movie-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    background-color: $bgColor;
+    border-style: solid;
+    border-color: $boxColor;
+    border-top-width: 0px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+}
+
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-style: solid;
+    border-color: $boxColor;
+    border-width: 5px;
+    background-color: burlywood;
+    max-width: 320px;
+    width: 320px;
+    margin: 15px;
+    padding: 20px 5px;
+    box-shadow: 0.5px 0.5px 10px rgb(22 2 94);
+}
+
+.mat-card-header {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    color: $text;
+}
+
+.movie-card-title {
+    display: flex;
+    max-width: 230px;
+    justify-content: center;
+    text-align: center;
+    color: solid balck;
+}
+
+img {
+    width: 280px;
+    height: 350px;
+    object-fit: contain;
+}
+
+.mat-card-actions {
+    padding-top: 20px;
+    display: flex;
+    padding: 22px;
+}
+
+.movie-button {
+    background-color: brown;
+    color: $text;
+}
+
+.fav-button {
+    transform: scale(1.4);
+    position: absolute;
+    left: 1px;
+    top: 10px;
+    color: $boxColor;
+}
