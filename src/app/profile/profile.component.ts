@@ -40,7 +40,7 @@ export class ProfileComponent implements OnInit{
       return this.user;
     })
   }
-
+    
   /**
    * Log out the user
    * 

@@ -1,7 +1,9 @@
-$primary: #b20000;
-$secondary: #6f0000;
-$textColor: #414141;
-$btnColor: #252525;
+$bgColor: #8d4c4c;;
+$text: #fff;
+$boxColor: #000;
+$secondColor: #30a73a;
+$secondColor2: #af0624;
+$bgColor2: hsl(190, 93%, 35%);
 
 .profile-container {
     display: flex;
@@ -12,15 +14,26 @@ $btnColor: #252525;
     margin-right: auto;
     justify-self: stretch;
 }
+.content-wrapper {
+        justify-content: center;
+        margin-top: 45px;
+        margin-bottom: 25px;
+        background-color: $bgColor2;
+        border-style: solid; 
+}
 
 mat-card {
     margin: 30px auto;
     padding: 15px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 10px grey;
     justify-content: space-between;
-    color: $textColor;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: $boxColor;
+    border-width: 3px;
+    border-color: #ff00ee rgb(57, 255, 12)hwb(184 22% 1%) orangered;
+    background-color: $bgColor;
 }
 
 .update-form {
@@ -33,7 +46,7 @@ mat-card-header {
     font-weight: 500;
     display: flex;
     justify-content: center;
-    color: $primary;
+    color: $text;
     margin-bottom: 36px;
 }
 
@@ -44,17 +57,15 @@ mat-card-header {
 }
 
 .mat-mdc-raised-button.mat-primary {
-    background-color: $btnColor;
-    color: white;
+    background-color: $secondColor;
 }
 
 .mat-mdc-raised-button.mat-warn {
-    background-color: $primary;
-    color: white;
+    background-color: $secondColor2;
 }
 
 mat-label {
-    color: $textColor;
+    color: $boxColor;
 }
 
 @media all and (max-width: 300px) {

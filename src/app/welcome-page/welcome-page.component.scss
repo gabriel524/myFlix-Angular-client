@@ -3,13 +3,13 @@ $text: #fff;
 $boxColor: #000;
 $secondColor: #8d4c4c;
 
-.welcome-page {
+.WelcomePageComponent {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 40px;
-    background-color: $bgColor;
+    padding: 30px 40px 16 45;
+    background-color: hsl(190, 93%, 35%);
     box-sizing: border-box;
     border-style: solid;
     border-color: $boxColor;
@@ -19,11 +19,11 @@ $secondColor: #8d4c4c;
 .welcome-card {
     max-width: 400px;
     margin: auto;
-    padding: 25px;
-    background-color: $secondColor;
     border-style: solid;
-    border-color: $boxColor;
+    padding: 50px;
+    background-color: $secondColor;
     border-width: 5px;
+    border-color: #ff00ee rgb(57, 255, 12)hwb(184 22% 1%) orangered;
 }
 
 .welcome-header {
