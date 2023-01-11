@@ -29,12 +29,13 @@ $secondColor: #8d4c4c;
 }
 
 .welcome-header {
-    font-family: 'Monoton', cursive;
+    font-family:'Lucida Sans';
     margin-bottom: 5%;
     justify-content: center;
+    align-items: center;
     font-weight: 500px;
     color: $text;
-    font-size: 200%;
+    font-size: 250%;
 }
 
 .welcome-card-actions {
@@ -45,6 +46,16 @@ $secondColor: #8d4c4c;
     background-color: $boxColor;
     color: white;
     border-radius: 50px;
+}
+
+.mdc-card__actions {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box; 
+    min-height: 52px; 
+    padding: 10px;
+    justify-content: center;
 }
 
 .mat-mdc-raised-button.mat-primary:hover {
