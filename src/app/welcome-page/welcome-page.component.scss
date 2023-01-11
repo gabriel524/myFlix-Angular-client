@@ -17,19 +17,41 @@ $secondColor: #8d4c4c;
 }
 
 .welcome-card {
-    max-width: 400px;
-    margin: auto;
+    margin: 25vh auto auto auto;
+    flex-direction: column;
+    box-shadow: 0 0 20px 1px rgb(35, 10, 10);
+    justify-content: space-evenly;
     border-style: solid;
-    padding: 50px;
+    padding: 100px;
     background-color: $secondColor;
     border-width: 5px;
     border-color: #ff00ee rgb(57, 255, 12)hwb(184 22% 1%) orangered;
 }
 
 .welcome-header {
-    display: flex;
+    font-family: 'Monoton', cursive;
+    margin-bottom: 5%;
     justify-content: center;
+    font-weight: 500px;
     color: $text;
+    font-size: 200%;
+}
+
+.welcome-card-actions {
+    display: flex;
+    justify-content: space-evenly;
+}
+.mat-mdc-raised-button.mat-primary {
+    background-color: $boxColor;
+    color: white;
+    border-radius: 50px;
+}
+
+.mat-mdc-raised-button.mat-primary:hover {
+    color: #ff00ee;
+}
+.mat-mdc-raised-button.mat-primary:active{
+    color: aqua;
 }
 
 .register {
