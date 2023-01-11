@@ -3,7 +3,6 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -40,7 +39,7 @@ export class ProfileComponent implements OnInit{
       return this.user;
     })
   }
-    
+
   /**
    * Log out the user
    * 
@@ -86,4 +85,3 @@ export class ProfileComponent implements OnInit{
     });
   }
 }
-

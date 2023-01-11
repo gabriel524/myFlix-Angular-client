@@ -31,7 +31,7 @@ mat-card {
     box-sizing: border-box;
     border-style: solid;
     border-color: $boxColor;
-    border-width: 3px;
+    border-width: 5px;
     border-color: #ff00ee rgb(57, 255, 12)hwb(184 22% 1%) orangered;
     background-color: $bgColor;
 }
@@ -58,10 +58,12 @@ mat-card-header {
 
 .mat-mdc-raised-button.mat-primary {
     background-color: $secondColor;
+    border-radius: 15px;
 }
 
 .mat-mdc-raised-button.mat-warn {
     background-color: $secondColor2;
+    border-radius: 15px;
 }
 
 mat-label {
