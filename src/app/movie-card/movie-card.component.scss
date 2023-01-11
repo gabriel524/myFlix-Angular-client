@@ -8,6 +8,7 @@ $bgColor: hsl(190, 93%, 35%);
 $text: #fff;
 $boxColor: rgb(10, 56, 96);
 $secondColor: #8d4c4c;
+$primary: #b20000;
 
 .movie-page {
     display: flex;
@@ -78,6 +79,7 @@ img {
     transform: scale(1.4);
     position: absolute;
     left: 1px;
+    font-size: 14px;
     top: 10px;
-    color: $boxColor;
+    color: $primary;
 }
