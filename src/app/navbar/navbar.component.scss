@@ -1,6 +1,6 @@
 $bgColor: #af0624;
 $text: #fff;
-$boxColor: #000;
+$boxColor: rgb(0, 0, 0);
 $secondColor: #8d4c4c;
 
 .nav-bar {
@@ -8,7 +8,7 @@ $secondColor: #8d4c4c;
     width: 100%;
     top: 0;
     z-index: 1;
-    background-color: $secondColor;
+    background-color: peru;
     border-style: solid;
     border-color: $boxColor;
     border-width: 5px;
@@ -21,6 +21,33 @@ $secondColor: #8d4c4c;
     border-left-style: solid;
     border-left-width: 5px;
     border-right-style: solid;
-    border-right-color: $boxColor;
+    border-left-color: $text;
     border-right-width: 5px;
+    border-right-color: $text;
+}
+
+.profile-button {
+    position: fixed;
+    top: 5;
+    border-left-style: solid;
+    border-left-width: 5px;
+    border-right-style: solid;
+    border-left-color: $text;
+    border-right-width: 5px;
+    border-right-color: $text;
+    padding: right 5px;
+}
+
+.movies-button {
+    border-left-style: solid;
+    border-left-width: 5px;
+    border-right-style: solid;
+    border-left-color: $text;
+    border-right-width: 5px;
+    border-right-color: $text;
+
+}
+
+.Person {
+    color: white;
 }

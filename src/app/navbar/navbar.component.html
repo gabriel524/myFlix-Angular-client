@@ -1,9 +1,13 @@
 <div class="nav-bar">
-  <button mat-button (click)="toMovies()">Movies</button>
+  <button mat-button (click)="goToMovies()"class="movies-button">
+  <mat-icon>movie</mat-icon> Movies
+  </button>
   <span></span>
-  <button mat-button (click)="toProfile()">Profile</button>
+  <button mat-button (click)="goToProfile()"class="profile-button">
+  <mat-icon>person-add</mat-icon> Profile
+  </button>
   <span></span>
   <button mat-button (click)="logout()" class="logout-button">
-    <mat-icon>logout</mat-icon> Logout
+    <mat-icon class="person">exit_to_app</mat-icon> Logout
   </button>
 </div>

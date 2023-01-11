@@ -1,0 +1,46 @@
+$bgColor: #af0624;
+$text: #fff;
+$boxColor: #000;
+$secondColor: #8d4c4c;
+$confirm: #025408;
+
+.edit-user-card {
+    max-width: 400px;
+    margin: auto;
+    padding: 25px;
+    background-color: $secondColor;
+    border-style: solid;
+    border-color: $boxColor;
+    border-width: 5px;
+}
+
+.edit-user-header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: $text;
+}
+
+.edit-field {
+    color: $text;
+}
+
+.edit-user-content {
+    text-align: center;
+}
+
+.update-button {
+    background-color: $confirm;
+    color: $text;
+}
+
+.edit-close {
+    background-color: $boxColor;
+    color: $text;
+}
+
+.edit-actions {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
