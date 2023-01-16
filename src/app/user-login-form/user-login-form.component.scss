@@ -1,0 +1,38 @@
+$bgColor: #af0624;
+$text: #fff;
+$boxColor:  #30a73a;
+$secondColor: hsl(0, 93%, 23%);
+
+.login-card {
+    max-width: 400px;
+    margin: auto;
+    padding: 25px;
+    background-color: $secondColor;
+    border-style: solid;
+    border-color: #ff00ee rgb(57, 255, 12)hwb(184 22% 1%) orangered;
+    border-width: 5px;
+}
+
+.login-header {
+    display: flex;
+    justify-content: center;
+    color: $text;
+}
+.login-title{
+    padding: 10px;
+    font-size: 23px;
+}
+
+.login-field {
+    color: $text;
+}
+
+.login-button {
+    background-color: $boxColor;
+    border-radius: 15px;
+}
+
+.login-actions {
+    display: flex;
+    justify-content: space-evenly;
+}

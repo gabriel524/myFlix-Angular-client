@@ -1,0 +1,38 @@
+$bgColor: #af0624;
+$text: #fff;
+$boxColor: #30a73a;
+$secondColor: hsl(0, 93%, 23%);
+
+.register-card {
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    background-color: $secondColor;
+    border-style: solid;
+    border-color: #ff00ee rgb(57, 255, 12)hwb(184 22% 1%) orangered;
+    border-width: 6px;
+}
+
+.register-header {
+    display: flex;
+    justify-content: center;
+    color: $text;
+}
+
+.register-field {
+    color: $text;
+}
+.title {
+    padding: 10px;
+    font-size: 23px;
+}
+
+.register-button {
+    background-color: $boxColor;
+    border-radius: 15px;
+}
+
+.register-actions {
+    display: flex;
+    justify-content: space-evenly;
+}

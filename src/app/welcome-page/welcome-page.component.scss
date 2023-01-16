@@ -1,7 +1,7 @@
 $bgColor: #af0624;
 $text: #fff;
 $boxColor: #000;
-$secondColor: #8d4c4c;
+$secondColor: hsl(0, 93%, 23%);
 
 .WelcomePageComponent {
     height: 100vh;
@@ -24,7 +24,7 @@ $secondColor: #8d4c4c;
     border-style: solid;
     padding: 100px;
     background-color: $secondColor;
-    border-width: 5px;
+    border-width: 6px;
     border-color: #ff00ee rgb(57, 255, 12)hwb(184 22% 1%) orangered;
 }
 
@@ -67,4 +67,14 @@ $secondColor: #8d4c4c;
 
 .register {
     background-color: $boxColor;
+}
+
+.register-card {
+    max-width: 400px;
+    margin: auto;
+    padding: 25px;
+    background-color: #8d4c4c;
+    border-style: solid;
+    border-color: #000;
+    border-width: 5px;
 }
