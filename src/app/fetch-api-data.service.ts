@@ -92,7 +92,7 @@ export class FetchApiDataService {
   }
 
   //get favorite movies
-  public getFavorites(): Observable<any> {
+  public getFavoritesMovies(): Observable<any> {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
     return this.http.get(apiUrl + `users/${username}/movies`, {headers: new HttpHeaders(
@@ -117,7 +117,7 @@ export class FetchApiDataService {
     );
   }
 
-    public getFavorite(): Observable<any> {
+    public getFavoriteMovies(): Observable<any> {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
     return this.http.get(apiUrl + `users/${username}/movies`, {headers: new HttpHeaders(
@@ -170,6 +170,26 @@ export class FetchApiDataService {
     );
   }
 
+// Non-typed response extraction
+  private extractResponseData(res: any): any {
+    const body = res;
+    return body || { };
+  }
+
+private handleError(error: HttpErrorResponse): any {
+    if (error.error instanceof ErrorEvent) {
+    console.error('Some error occurred:', error.error.message);
+    } else {
+    console.error(
+        `Error Status code ${error.status}, ` +
+        `Error body is: ${error.error}`);
+    }
+    return throwError(
+    'Something bad happened!! Please try again later!!');
+  }
+}
+
+
     /* add to favorite movies
   public  addFavoriteMovies(movieID: any): Observable<any> {
     const token = localStorage.getItem('token');
@@ -196,22 +216,3 @@ export class FetchApiDataService {
       catchError(this.handleError)
     );
   } */
-
-// Non-typed response extraction
-  private extractResponseData(res: any): any {
-    const body = res;
-    return body || { };
-  }
-
-private handleError(error: HttpErrorResponse): any {
-    if (error.error instanceof ErrorEvent) {
-    console.error('Some error occurred:', error.error.message);
-    } else {
-    console.error(
-        `Error Status code ${error.status}, ` +
-        `Error body is: ${error.error}`);
-    }
-    return throwError(
-    'Something bad happened!! Please try again later!!');
-  }
-}

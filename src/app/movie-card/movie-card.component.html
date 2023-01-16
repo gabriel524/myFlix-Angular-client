@@ -38,22 +38,25 @@
                 mat-icon-button
                 class="fav-button"
                 color="red"
+                 *ngIf="!isFav(movie._id)"
                 aria-label="Example icon button with a heart icon"
-                (click)="addFavoriteMovies(movie._id)"
+                (click)="onToggleFavMovie(movie._id)"
                 >
             <mat-icon class="favIcon">{{FavoriteMovies.includes(movie._id)
              ? 'favorite' : 'favorite_border'}}</mat-icon>
       </button>
-       <button 
+       </mat-card-actions>
+    </mat-card>
+</div>
+
+  <!-- <button 
                 mat-icon-button
                 class="fav-button"
                 color="red"
+                 *ngIf="!isFav(movie._id)"
                 aria-label="Example icon button with a heart icon"
                 (click)="deleteFavoriteMovies(movie._id)"
             >
             <mat-icon class="favIcon">{{FavoriteMovies.includes(movie._id)
              ? 'favorite' : 'favorite_border'}}</mat-icon>
-            </button>
-       </mat-card-actions>
-    </mat-card>
-</div>
+        </button> -->

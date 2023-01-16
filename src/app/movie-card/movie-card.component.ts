@@ -93,12 +93,46 @@ isFav(id: string): boolean {
   return this.favorites.includes(id);
 }
 
-//adds movie to favorites
-addFavoriteMovies(id: string): void {
+//add movie to favorites
+  
+  onToggleFavMovie(id: string): void {
+    //console.log(this.favoriteMovies);
+    if(!this.FavoriteMovies.includes(id)) {
+      this.fetchApiDataService.addFavoriteMovies(id).subscribe((res)=>{
+        this.FavoriteMovies=res.FavoriteMovies;
+        this.snackBar.open('Movie addded to list of favorites!', 'OK', {
+          duration: 3000
+       })
+      }, (res) => {
+        //Error response
+        //console.log('loginUser() response2:', res);
+        this.snackBar.open(res.message, 'OK', {
+          duration: 4000
+        });
+      })
+    } else {
+      this.fetchApiDataService.deleteFavoriteMovies(id).subscribe((result)=>{
+        this.FavoriteMovies=result.FavoriteMovies;
+        this.snackBar.open('Movie successfully deleted from favorites!', 'OK', {
+          duration: 3000
+       })
+      }, (result) => {
+        //Error response
+        //console.log('loginUser() response2:', res);
+        this.snackBar.open(result.message, 'OK', {
+          duration: 4000
+        });
+      })
+    }
+  }
+}
+
+
+/* addFavoriteMovies(id: string): void {
   console.log(id);
   this.fetchApiDataService.addFavoriteMovies(id).subscribe((result) => {
     console.log(result);
-    this.snackBar.open('Movie has been added to your favorites!', 'OK', {
+    this.snackBar.open('Movie successfully addded to list of favorites!', 'OK', {
       duration: 2000,
     });
     this.ngOnInit();
@@ -109,12 +143,10 @@ deleteFavoriteMovies(id: string): void {
   console.log(id);
   this.fetchApiDataService.deleteFavoriteMovies(id).subscribe((result) => {
     console.log(result);
-    this.snackBar.open('Movie has been removed from your favorites!', 'OK', {
+    this.snackBar.open('Movie successfully deleted from favorites!', 'OK', {
       duration: 2000,
     });
     this.ngOnInit();
   });
-}
-}
-
+} */
 
