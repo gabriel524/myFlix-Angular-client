@@ -16,7 +16,8 @@ export class MovieCardComponent implements OnInit {
   
   movies: any[]=[];
   user: any={};
-  favoriteMovies: any[] = [];
+  FavoriteMovies: any[] = [];
+  favorites: any[] =[];
 
   constructor(
     public fetchApiDataService: FetchApiDataService,
@@ -40,9 +41,9 @@ export class MovieCardComponent implements OnInit {
 
     getFavMovies(): void {
     this.fetchApiDataService.getUser().subscribe((res: any)=>{
-      this.favoriteMovies=res.FavoriteMovies;
+      this.FavoriteMovies=res.FavoriteMovies;
       //console.log('getFavMovies():', res.FavoriteMovies);
-      return this.favoriteMovies;
+      return this.FavoriteMovies;
     })
   }
 
@@ -77,36 +78,43 @@ openDescription(title: string, description: string): void {
     width: '450px',
   });
 }
-  onToggleFavMovie(id: string): void {
-    //console.log(this.favoriteMovies);
-    if(!this.favoriteMovies.includes(id)) {
-      this.fetchApiDataService.addFavoriteMovie(id).subscribe((res)=>{
-        this.favoriteMovies=res.FavoriteMovies;
-        this.snackBar.open('Movie added to favourites.', 'OK', {
-          duration: 3000
-       })
-      }, (res) => {
-        //Error response
-        //console.log('loginUser() response2:', res);
-        this.snackBar.open(res.message, 'Something not right!', {
-          duration: 4000
-        });
-      })
-    } else {
-      this.fetchApiDataService.deleteFavoriteMovie(id).subscribe((res)=>{
-        this.favoriteMovies=res.FavoriteMovies;
-        this.snackBar.open('Movie removed from favourites.', 'OK', {
-          duration: 3000
-       })
-      }, (res) => {
-        //Error response
-        //console.log('loginUser() response2:', res);
-        this.snackBar.open(res.message, 'Something not right!', {
-          duration: 4000
-        });
-      })
-    }
-  }
+  
+  //gets favorite movies for user
+getFavoritesMovies(): void {
+  this.fetchApiDataService.getUser().subscribe((resp: any) => {
+    this.favorites = resp.FavoriteMovies;
+    console.log(this.favorites);
+    return this.favorites;
+  });
+}
+
+//checks if movie is in favorites
+isFav(id: string): boolean {
+  return this.favorites.includes(id);
+}
+
+//adds movie to favorites
+addFavoriteMovies(id: string): void {
+  console.log(id);
+  this.fetchApiDataService.addFavoriteMovies(id).subscribe((result) => {
+    console.log(result);
+    this.snackBar.open('Movie has been added to your favorites!', 'OK', {
+      duration: 2000,
+    });
+    this.ngOnInit();
+  });
+}
+
+deleteFavoriteMovies(id: string): void {
+  console.log(id);
+  this.fetchApiDataService.deleteFavoriteMovies(id).subscribe((result) => {
+    console.log(result);
+    this.snackBar.open('Movie has been removed from your favorites!', 'OK', {
+      duration: 2000,
+    });
+    this.ngOnInit();
+  });
+}
 }
 
 

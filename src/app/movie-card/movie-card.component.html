@@ -39,9 +39,9 @@
                 class="fav-button"
                 color="red"
                 aria-label="Example icon button with a heart icon"
-                (click)="onToggleFavMovie(movie._id)"
+                (click)="addFavoriteMovies(movie._id)"
                 >
-        <mat-icon class="favIcon">{{favoriteMovies.includes(movie._id)
+        <mat-icon class="favIcon">{{FavoriteMovies.includes(movie._id)
              ? 'favorite' : 'favorite_border'}}</mat-icon>
       </button>
        </mat-card-actions>
